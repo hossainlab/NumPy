@@ -1,7 +1,4 @@
 # Introduction to NumPy
-![](./img/numpy.jpeg)
-
-## What is NumPy?
 
 NumPy is a Python package which stands for ‘Numerical Python’. It is the core library for scientific computing, which contains a powerful n-dimensional array object, provide tools for integrating C, C++ etc. It is also useful in linear algebra, random number capability etc. NumPy array can also be used as an efficient multi-dimensional container for generic data. Now, let me tell you what exactly is a python numpy array.
 
@@ -25,13 +22,13 @@ Numpy array is a powerful N-dimensional array object which is in the form of row
 
 
 ## Table of Contents
-- An Introduction to NumPy[[Kaggle](https://www.kaggle.com/jhossain/an-introduction-to-numpy))]
-- Array Creation Functions[Kaggle](https://www.kaggle.com/jhossain/introduction-to-numpy-array-creation-function))]
+- An Introduction to NumPy[[Kaggle](https://www.kaggle.com/jhossain/an-introduction-to-numpy)]
+- Array Creation Functions[Kaggle](https://www.kaggle.com/jhossain/introduction-to-numpy-array-creation-function)]
 - Data Types[[Kaggle](#)]
 - Array Operations[[Kaggle](https://www.kaggle.com/jhossain/introduction-to-numpy-array-operations)]
 - Vectors and Matrices[[Kaggle](#)]
 - Linear Algebra[[Kaggle](https://www.kaggle.com/jhossain/introduction-to-numpy-vectors-and-matrices)]
-- Statistics[[Kaggle]] 
+- Statistics[[Kaggle](#)]
 
 
 ## References
