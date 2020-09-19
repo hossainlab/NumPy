@@ -1,0 +1,5 @@
+- file: index
+
+- part: NumPy
+  chapters:
+  - file: notebooks/00-Introduction to NumPy-I 
