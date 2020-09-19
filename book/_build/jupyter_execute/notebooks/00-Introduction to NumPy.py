@@ -1,8 +1,8 @@
-## What is NumPy?
+### What is NumPy?
 
-NumPy is a Python package which stands for ‘Numerical Python’. It is the core library for scientific computing, which contains a powerful n-dimensional array object, provide tools for integrating C, C++ etc. It is also useful in linear algebra, random number capability etc. NumPy array can also be used as an efficient multi-dimensional container for generic data. Now, let me tell you what exactly is a python numpy array.
+`NumPy` is a Python package which stands for ‘Numerical Python’. It is the core library for scientific computing, which contains a powerful n-dimensional array object, provide tools for integrating C, C++ etc. It is also useful in linear algebra, random number capability etc. NumPy array can also be used as an efficient multi-dimensional container for generic data. Now, let me tell you what exactly is a python numpy array.
 
-## Keypoints 
+### Keypoints 
 - Numpy stands for numerical Python
 - Fundamental package for numerical computations in Python
 - a powerful N-dimensional array object
@@ -10,10 +10,10 @@ NumPy is a Python package which stands for ‘Numerical Python’. It is the cor
 - tools for integrating C/C++ and Fortran code
 - useful linear algebra, Fourier transform, and random number capabilities
 
-## NumPy Array
+### NumPy Array
 Numpy array is a powerful N-dimensional array object which is in the form of rows and columns. We can initialize numpy arrays from nested Python lists and access it elements. In order to perform these numpy operations.
 
-## N-dimensional Array
+### N-dimensional Array
 - 1Dimensional(1D) Array
 - 2Dimensional(2D) Array
 - 3Dimensional(3D) Array
@@ -21,18 +21,18 @@ Numpy array is a powerful N-dimensional array object which is in the form of row
 
 ![NdArray](../img/arrays.png)
 
-## Getting Started
+### Getting Started
 Use the following import convention
 ```python
 import numpy as np
 ```
 
-## Why Numpy?
+### Why Numpy?
 - Less Memory
 - Fast
 - Convenient
 
-## Calculation
+### Calculation
 - Element wise sum is not possible in Python list. But numpy can do that it is an advantage of numpy array
 
 
@@ -47,7 +47,7 @@ A1 = np.array([1, 2, 3])
 A2 = np.array([4, 5, 6])
 print(A1+A2)
 
-## Less Memory
+### Less Memory
 
 import numpy as np
 import time
@@ -58,7 +58,7 @@ print("Python List: ", sys.getsizeof(5)*len(S))
 D = np.arange(1000)
 print("Numpy Array: ", D.size*D.itemsize)
 
-## Faster
+### Faster
 
 import time
 import sys
@@ -84,7 +84,7 @@ print((time.time()-start)*1000)
 
 %timeit np.sum(np.arange(1000))
 
-## Creating Arrays 
+### Creating Arrays 
 - **Array:** Ordered collection of elements of basic data types of given length.
 - **Syntax**
 ```python 
@@ -101,7 +101,7 @@ print(A)
 # type 
 print(type(A))
 
-## Array with Categorical Entities 
+### Array with Categorical Entities 
 - Numpy can handle different categorical entities. 
 - All elements are coerced into same data type 
 
@@ -120,9 +120,9 @@ print(A2)
 A3 = np.array([[(1, 2, 3), (4, 5, 6)], [(7, 8, 9), (10, 11, 12)]])
 print(A3) 
 
-## Inspecting array properties
+### Inspecting array properties
 
-### Size 
+#### Size 
 - Returns number of elements in array
 - **Syntax:** `array.size`
 
@@ -130,7 +130,7 @@ A1 = np.array([1, 2, 3,4, 5])
 # size 
 A1.size
 
-### Shape
+#### Shape
 - Returns dimensions of array (rows,columns)
 - **Syntax:** `array.shape`
 
@@ -144,7 +144,7 @@ A2.shape[0]
 # get column
 A2.shape[1]
 
-### Data Type
+#### Data Type
 - Returns type of elements in array
 - **Syntax:** `array.size`
 
@@ -152,7 +152,7 @@ A3 = np.linspace(0, 100, 6)
 # dtypes 
 A3.dtype
 
- ## Type Conversion 
+### Type Conversion 
  - Convert array elements to type dtype
  - **Syntax:** `array.astype(dtype)`
      - dtype - data type 
@@ -161,7 +161,7 @@ A4 = np.ones((2,3))
 # convert 
 A4.astype(np.float16)
 
-## Numpy array to Python List 
+### Numpy array to Python List 
 - Returns the Python list 
 - **Syntax:** `array.tolist()`
 
@@ -169,7 +169,7 @@ A5 = np.linspace(0, 100, 20)
 # array to list 
 A5.tolist() 
 
-## Get Help: View documentation
+### Get Help: View documentation
 - Returns a documentation
 - **Syntax:** `np.info(np.function)`
     - function - linspace, logspace, eye, ones, zeros etc.
