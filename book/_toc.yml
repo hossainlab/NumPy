@@ -2,4 +2,4 @@
 
 - part: NumPy
   chapters:
-  - file: notebooks/00-Introduction to NumPy-I 
+  - file: notebooks/00-Introduction to NumPy
