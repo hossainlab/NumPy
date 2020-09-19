@@ -24,8 +24,8 @@ repository:
   path_to_book                : book
 
 
-# launch_buttons:
-  # notebook_interface          : classic
-  # binderhub_url               : "https://mybinder.org"
-  # colab_url                   : "https://colab.research.google.com"
-  # thebe                       : true
+launch_buttons:
+  notebook_interface          : classic
+  binderhub_url               : "https://mybinder.org"
+  colab_url                   : "https://colab.research.google.com"
+  thebe                       : true
