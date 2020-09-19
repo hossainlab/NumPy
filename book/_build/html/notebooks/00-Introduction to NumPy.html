@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>What is NumPy? &#8212; Introduction to NumPy</title>
+    <title>Getting Started &#8212; Introduction to NumPy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Array Creation Function" href="01-Array Creation Function.html" />
-    <link rel="prev" title="Welcome" href="../index.html" />
+    <link rel="prev" title="About NumPy" href="intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -77,79 +77,14 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   About NumPy
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   What is NumPy?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#keypoints">
-   Keypoints
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#numpy-array">
-   NumPy Array
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#n-dimensional-array">
-   N-dimensional Array
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#getting-started">
    Getting Started
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#why-numpy">
-   Why Numpy?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#calculation">
-   Calculation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#less-memory">
-   Less Memory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#faster">
-   Faster
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#creating-arrays">
-   Creating Arrays
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#array-with-categorical-entities">
-   Array with Categorical Entities
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#inspecting-array-properties">
-   Inspecting array properties
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#type-conversion">
-   Type Conversion
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#numpy-array-to-python-list">
-   Numpy array to Python List
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#get-help-view-documentation">
-   Get Help: View documentation
   </a>
  </li>
  <li class="toctree-l1">
@@ -269,7 +204,76 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-numpy">
+   Why Numpy?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculation">
+   Calculation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#less-memory">
+   Less Memory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#faster">
+   Faster
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-arrays">
+   Creating Arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array-with-categorical-entities">
+   Array with Categorical Entities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inspecting-array-properties">
+   Inspecting array properties
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#size">
+     Size
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shape">
+     Shape
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-type">
+     Data Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#type-conversion">
+   Type Conversion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy-array-to-python-list">
+   Numpy array to Python List
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-help-view-documentation">
+   Get Help: View documentation
+  </a>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -278,43 +282,14 @@
         
               <div>
                 
-  <div class="section" id="what-is-numpy">
-<h1>What is NumPy?<a class="headerlink" href="#what-is-numpy" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">NumPy</span></code> is a Python package which stands for ‘Numerical Python’. It is the core library for scientific computing, which contains a powerful n-dimensional array object, provide tools for integrating C, C++ etc. It is also useful in linear algebra, random number capability etc. NumPy array can also be used as an efficient multi-dimensional container for generic data. Now, let me tell you what exactly is a python numpy array.</p>
-</div>
-<div class="section" id="keypoints">
-<h1>Keypoints<a class="headerlink" href="#keypoints" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Numpy stands for numerical Python</p></li>
-<li><p>Fundamental package for numerical computations in Python</p></li>
-<li><p>a powerful N-dimensional array object</p></li>
-<li><p>sophisticated (broadcasting) functions</p></li>
-<li><p>tools for integrating C/C++ and Fortran code</p></li>
-<li><p>useful linear algebra, Fourier transform, and random number capabilities</p></li>
-</ul>
-</div>
-<div class="section" id="numpy-array">
-<h1>NumPy Array<a class="headerlink" href="#numpy-array" title="Permalink to this headline">¶</a></h1>
-<p>Numpy array is a powerful N-dimensional array object which is in the form of rows and columns. We can initialize numpy arrays from nested Python lists and access it elements. In order to perform these numpy operations.</p>
-</div>
-<div class="section" id="n-dimensional-array">
-<h1>N-dimensional Array<a class="headerlink" href="#n-dimensional-array" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>1Dimensional(1D) Array</p></li>
-<li><p>2Dimensional(2D) Array</p></li>
-<li><p>3Dimensional(3D) Array</p></li>
-</ul>
-<p><img alt="NdArray" src="../_images/arrays.png" /></p>
-</div>
-<div class="section" id="getting-started">
+  <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <p>Use the following import convention</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
-</div>
 <div class="section" id="why-numpy">
-<h1>Why Numpy?<a class="headerlink" href="#why-numpy" title="Permalink to this headline">¶</a></h1>
+<h2>Why Numpy?<a class="headerlink" href="#why-numpy" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Less Memory</p></li>
 <li><p>Fast</p></li>
@@ -322,7 +297,7 @@
 </ul>
 </div>
 <div class="section" id="calculation">
-<h1>Calculation<a class="headerlink" href="#calculation" title="Permalink to this headline">¶</a></h1>
+<h2>Calculation<a class="headerlink" href="#calculation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Element wise sum is not possible in Python list. But numpy can do that it is an advantage of numpy array</p></li>
 </ul>
@@ -359,7 +334,7 @@
 </div>
 </div>
 <div class="section" id="less-memory">
-<h1>Less Memory<a class="headerlink" href="#less-memory" title="Permalink to this headline">¶</a></h1>
+<h2>Less Memory<a class="headerlink" href="#less-memory" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -382,7 +357,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="section" id="faster">
-<h1>Faster<a class="headerlink" href="#faster" title="Permalink to this headline">¶</a></h1>
+<h2>Faster<a class="headerlink" href="#faster" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -440,7 +415,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="section" id="creating-arrays">
-<h1>Creating Arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this headline">¶</a></h1>
+<h2>Creating Arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Array:</strong> Ordered collection of elements of basic data types of given length.</p></li>
 <li><p><strong>Syntax</strong></p></li>
@@ -485,7 +460,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="section" id="array-with-categorical-entities">
-<h1>Array with Categorical Entities<a class="headerlink" href="#array-with-categorical-entities" title="Permalink to this headline">¶</a></h1>
+<h2>Array with Categorical Entities<a class="headerlink" href="#array-with-categorical-entities" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Numpy can handle different categorical entities.</p></li>
 <li><p>All elements are coerced into same data type</p></li>
@@ -552,9 +527,9 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="section" id="inspecting-array-properties">
-<h1>Inspecting array properties<a class="headerlink" href="#inspecting-array-properties" title="Permalink to this headline">¶</a></h1>
+<h2>Inspecting array properties<a class="headerlink" href="#inspecting-array-properties" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="size">
-<h2>Size<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h2>
+<h3>Size<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Returns number of elements in array</p></li>
 <li><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">array.size</span></code></p></li>
@@ -575,7 +550,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="section" id="shape">
-<h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<h3>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Returns dimensions of array (rows,columns)</p></li>
 <li><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">array.shape</span></code></p></li>
@@ -622,7 +597,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="section" id="data-type">
-<h2>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h2>
+<h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Returns type of elements in array</p></li>
 <li><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">array.size</span></code></p></li>
@@ -644,7 +619,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="section" id="type-conversion">
-<h1>Type Conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h1>
+<h2>Type Conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Convert array elements to type dtype</p></li>
 <li><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">array.astype(dtype)</span></code></p>
@@ -670,7 +645,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="section" id="numpy-array-to-python-list">
-<h1>Numpy array to Python List<a class="headerlink" href="#numpy-array-to-python-list" title="Permalink to this headline">¶</a></h1>
+<h2>Numpy array to Python List<a class="headerlink" href="#numpy-array-to-python-list" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Returns the Python list</p></li>
 <li><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">array.tolist()</span></code></p></li>
@@ -710,7 +685,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="section" id="get-help-view-documentation">
-<h1>Get Help: View documentation<a class="headerlink" href="#get-help-view-documentation" title="Permalink to this headline">¶</a></h1>
+<h2>Get Help: View documentation<a class="headerlink" href="#get-help-view-documentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Returns a documentation</p></li>
 <li><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">np.info(np.function)</span></code></p>
@@ -817,6 +792,7 @@ Graphical illustration:
 </div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -846,7 +822,7 @@ Graphical illustration:
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Welcome</a>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">About NumPy</a>
     <a class='right-next' id="next-link" href="01-Array Creation Function.html" title="next page">Array Creation Function</a>
 
     </div>
