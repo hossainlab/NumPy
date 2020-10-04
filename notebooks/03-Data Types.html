@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>In Progress! &#8212; Introduction to NumPy</title>
+    <title>Data Types &#8212; Introduction to NumPy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -37,6 +37,8 @@
     <link rel="shortcut icon" href="../_static/numpy.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setting Array Elements" href="04-Setting Array Elements.html" />
+    <link rel="prev" title="Array Creation Function" href="02-Array Creation Function.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -74,25 +76,67 @@
   Basics
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="00-intro.html">
    About NumPy
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="00-Introduction to NumPy.html">
+  <a class="reference internal" href="01-Introduction to NumPy.html">
    Getting Started
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01-Array Creation Function.html">
+  <a class="reference internal" href="02-Array Creation Function.html">
    Array Creation Function
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Data Types
+  </a>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-Array Operations.html">
-   Copying, Sorting and Reshaping
+  <a class="reference internal" href="04-Setting Array Elements.html">
+   Setting Array Elements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-Array Slicing.html">
+   Array Slicing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-Array Operations.html">
+   Array Operations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Advance
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-Vectors and Matrix.html">
+   Vectors and Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-Statistics.html">
+   Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-Linear Algebra.html">
+   Linear Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-NumPy Real World Examples.html">
+   NumPy Real World Examples
   </a>
  </li>
 </ul>
@@ -137,7 +181,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/02-Data Types.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebooks/03-Data Types.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -174,7 +218,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/numpy/master?urlpath=tree/book/notebooks/02-Data Types.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/numpy/master?urlpath=tree/book/notebooks/03-Data Types.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -182,7 +226,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/numpy/blob/master/book/notebooks/02-Data Types.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/numpy/blob/master/book/notebooks/03-Data Types.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -211,19 +255,11 @@
         
               <div>
                 
-  <div class="section" id="in-progress">
-<h1>In Progress!<a class="headerlink" href="#in-progress" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>https://numpy.org/</p></li>
-<li><p>https://www.edureka.co/blog/python-numpy-tutorial/</p></li>
-<li><p>https://github.com/enthought/Numpy-Tutorial-SciPyConf-2019</p></li>
-<li><p><a class="reference external" href="https://www.amazon.com/Python-Machine-Learning-Cookbook-Prateek/dp/1786464470">Python Machine Learning Cookbook</a></p></li>
-</ul>
-<hr>
-<p><em>This notebook was created by <a class="reference external" href="https://jhossain.me/">Jubayer Hossain</a> | Copyright © 2020, <a class="reference external" href="https://jhossain.me/">Jubayer Hossain</a></em></p>
+  <div class="section" id="data-types">
+<h1>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Coming Soon!</p>
+</div></blockquote>
 </div>
 
     <script type="text/x-thebe-config">
@@ -254,6 +290,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="02-Array Creation Function.html" title="previous page">Array Creation Function</a>
+    <a class='right-next' id="next-link" href="04-Setting Array Elements.html" title="next page">Setting Array Elements</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

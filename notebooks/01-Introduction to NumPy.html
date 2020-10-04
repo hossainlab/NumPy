@@ -37,8 +37,8 @@
     <link rel="shortcut icon" href="../_static/numpy.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Array Creation Function" href="01-Array Creation Function.html" />
-    <link rel="prev" title="About NumPy" href="intro.html" />
+    <link rel="next" title="Array Creation Function" href="02-Array Creation Function.html" />
+    <link rel="prev" title="About NumPy" href="00-intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -78,7 +78,7 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="00-intro.html">
    About NumPy
   </a>
  </li>
@@ -88,13 +88,55 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01-Array Creation Function.html">
+  <a class="reference internal" href="02-Array Creation Function.html">
    Array Creation Function
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-Array Operations.html">
-   Copying, Sorting and Reshaping
+  <a class="reference internal" href="03-Data Types.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-Setting Array Elements.html">
+   Setting Array Elements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-Array Slicing.html">
+   Array Slicing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-Array Operations.html">
+   Array Operations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Advance
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-Vectors and Matrix.html">
+   Vectors and Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-Statistics.html">
+   Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-Linear Algebra.html">
+   Linear Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-NumPy Real World Examples.html">
+   NumPy Real World Examples
   </a>
  </li>
 </ul>
@@ -139,7 +181,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/00-Introduction to NumPy.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebooks/01-Introduction to NumPy.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -176,7 +218,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/numpy/master?urlpath=tree/book/notebooks/00-Introduction to NumPy.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/numpy/master?urlpath=tree/book/notebooks/01-Introduction to NumPy.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -184,7 +226,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/numpy/blob/master/book/notebooks/00-Introduction to NumPy.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/numpy/blob/master/book/notebooks/01-Introduction to NumPy.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -383,8 +425,8 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>217.01884269714355
-49.56817626953125
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200.5774974822998
+59.0815544128418
 </pre></div>
 </div>
 </div>
@@ -396,7 +438,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15.1 µs ± 114 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16.5 µs ± 777 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -408,7 +450,7 @@ Numpy Array:  8000
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.61 µs ± 58.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 µs ± 965 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -822,8 +864,8 @@ Graphical illustration:
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">About NumPy</a>
-    <a class='right-next' id="next-link" href="01-Array Creation Function.html" title="next page">Array Creation Function</a>
+    <a class='left-prev' id="prev-link" href="00-intro.html" title="previous page">About NumPy</a>
+    <a class='right-next' id="next-link" href="02-Array Creation Function.html" title="next page">Array Creation Function</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -17,15 +17,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-### Rank of matrix 
-- `np.linalg.matrix_rank()` - returns rank of the matrix 
-- **Syntax:** `np.linalg.matrix_rank(matrix)`
+# multiplication
+np.dot(A,B) 
 ------------------
 
-[0;36m  File [0;32m"<ipython-input-7-e0929521b660>"[0;36m, line [0;32m2[0m
-[0;31m    - `np.linalg.matrix_rank()` - returns rank of the matrix[0m
-[0m      ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+[0;32m<ipython-input-28-be31d225efa9>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m# multiplication[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0mnp[0m[0;34m.[0m[0mdot[0m[0;34m([0m[0mA[0m[0;34m,[0m[0mB[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m<__array_function__ internals>[0m in [0;36mdot[0;34m(*args, **kwargs)[0m
 
-SyntaxError: invalid syntax (<ipython-input-7-e0929521b660>, line 2)
+[0;31mValueError[0m: shapes (5,4) and (5,4) not aligned: 4 (dim 1) != 5 (dim 0)
+ValueError: shapes (5,4) and (5,4) not aligned: 4 (dim 1) != 5 (dim 0)
 
