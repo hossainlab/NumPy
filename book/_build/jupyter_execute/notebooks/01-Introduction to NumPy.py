@@ -1,16 +1,22 @@
-# Getting Started
-Use the following import convention
-```python
-import numpy as np
-```
+#!/usr/bin/env python
+# coding: utf-8
 
-## Why Numpy?
-- Less Memory
-- Fast
-- Convenient
+# # Getting Started
+# Use the following import convention
+# ```python
+# import numpy as np
+# ```
 
-## Calculation
-- Element wise sum is not possible in Python list. But numpy can do that it is an advantage of numpy array
+# ## Why Numpy?
+# - Less Memory
+# - Fast
+# - Convenient
+
+# ## Calculation
+# - Element wise sum is not possible in Python list. But numpy can do that it is an advantage of numpy array
+# 
+
+# In[1]:
 
 
 # add 2 lists 
@@ -18,13 +24,21 @@ L1 = [1, 2, 3]
 L2 = [4, 5, 6]
 print(L1+L2)
 
+
+# In[2]:
+
+
 # element wise sum using numpy array 
 import numpy as np 
 A1 = np.array([1, 2, 3])
 A2 = np.array([4, 5, 6])
 print(A1+A2)
 
-## Less Memory
+
+# ## Less Memory
+
+# In[3]:
+
 
 import numpy as np
 import time
@@ -35,7 +49,11 @@ print("Python List: ", sys.getsizeof(5)*len(S))
 D = np.arange(1000)
 print("Numpy Array: ", D.size*D.itemsize)
 
-## Faster
+
+# ## Faster
+
+# In[4]:
+
 
 import time
 import sys
@@ -57,98 +75,167 @@ result = A1+A2
 # time in ms 
 print((time.time()-start)*1000)
 
-%timeit sum(range(1000))
 
-%timeit np.sum(np.arange(1000))
+# In[5]:
 
-## Creating Arrays 
-- **Array:** Ordered collection of elements of basic data types of given length.
-- **Syntax**
-```python 
-np.array(object)
-```
+
+get_ipython().run_line_magic('timeit', 'sum(range(1000))')
+
+
+# In[6]:
+
+
+get_ipython().run_line_magic('timeit', 'np.sum(np.arange(1000))')
+
+
+# ## Creating Arrays 
+# - **Array:** Ordered collection of elements of basic data types of given length.
+# - **Syntax**
+# ```python 
+# np.array(object)
+# ```
+
+# In[7]:
+
 
 # import numpy 
 import numpy as np 
+
+
+# In[8]:
+
 
 # Creating 1D array
 A = np.array([1, 2, 3])
 print(A)
 
+
+# In[9]:
+
+
 # type 
 print(type(A))
 
-## Array with Categorical Entities 
-- Numpy can handle different categorical entities. 
-- All elements are coerced into same data type 
+
+# ## Array with Categorical Entities 
+# - Numpy can handle different categorical entities. 
+# - All elements are coerced into same data type 
+
+# In[10]:
+
 
 # create an array with categorical entities. 
 X = np.array([12, 13, "n"])
 print(X)
 
+
+# In[11]:
+
+
 # type 
 print(type(X))
+
+
+# In[12]:
+
 
 # Creating 2D array
 A2 = np.array([[3, 4, 5], [7, 8, 9]])
 print(A2) 
 
+
+# In[13]:
+
+
 # Creating 3D array
 A3 = np.array([[(1, 2, 3), (4, 5, 6)], [(7, 8, 9), (10, 11, 12)]])
 print(A3) 
 
-## Inspecting array properties
 
-### Size 
-- Returns number of elements in array
-- **Syntax:** `array.size`
+# ## Inspecting array properties
+
+# ### Size 
+# - Returns number of elements in array
+# - **Syntax:** `array.size`
+
+# In[14]:
+
 
 A1 = np.array([1, 2, 3,4, 5])
 # size 
 A1.size
 
-### Shape
-- Returns dimensions of array (rows,columns)
-- **Syntax:** `array.shape`
+
+# ### Shape
+# - Returns dimensions of array (rows,columns)
+# - **Syntax:** `array.shape`
+
+# In[15]:
+
 
 A2 = np.array([[4, 5, 6], [7, 8, 9]])
 # shape 
 A2.shape 
 
+
+# In[16]:
+
+
 # get row 
 A2.shape[0]
+
+
+# In[17]:
+
 
 # get column
 A2.shape[1]
 
-### Data Type
-- Returns type of elements in array
-- **Syntax:** `array.size`
+
+# ### Data Type
+# - Returns type of elements in array
+# - **Syntax:** `array.size`
+
+# In[18]:
+
 
 A3 = np.linspace(0, 100, 6)
 # dtypes 
 A3.dtype
 
-## Type Conversion 
- - Convert array elements to type dtype
- - **Syntax:** `array.astype(dtype)`
-     - dtype - data type 
+
+# ## Type Conversion 
+#  - Convert array elements to type dtype
+#  - **Syntax:** `array.astype(dtype)`
+#      - dtype - data type 
+
+# In[19]:
+
 
 A4 = np.ones((2,3))
 # convert 
 A4.astype(np.float16)
 
-## Numpy array to Python List 
-- Returns the Python list 
-- **Syntax:** `array.tolist()`
+
+# ## Numpy array to Python List 
+# - Returns the Python list 
+# - **Syntax:** `array.tolist()`
+
+# In[20]:
+
 
 A5 = np.linspace(0, 100, 20)
 # array to list 
 A5.tolist() 
 
-## Get Help: View documentation
-- Returns a documentation
-- **Syntax:** `np.info(np.function)`
-    - function - linspace, logspace, eye, ones, zeros etc.
+
+# ## Get Help: View documentation
+# - Returns a documentation
+# - **Syntax:** `np.info(np.function)`
+#     - function - linspace, logspace, eye, ones, zeros etc.
+
+# In[21]:
+
 
 np.info(np.linspace)
+
