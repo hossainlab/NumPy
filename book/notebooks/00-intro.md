@@ -22,3 +22,16 @@ Numpy array is a powerful N-dimensional array object which is in the form of row
 
 
 ![NdArray](../img/arrays.png)
+
+
+## NumPy Ecosystem 
+- [statsmodel](https://www.statsmodels.org/stable/index.html) 
+Estimate statistical models, and performs tests. 
+- [scikit-image](https://scikit-image.org/) 
+Collection of algorithms for image processing.
+- [scikit-learn](https://scikit-learn.org/stable/tutorial/basic/tutorial.html#machine-learning-the-problem-setting) 
+Simple and efficient tools for machine learning 
+- [pandas](https://pandas.pydata.org/) 
+Data Analysis and manipulation.
+- [matplotlib](https://matplotlib.org/index.html)
+Plotting library for 2D graphs and visualizations.
