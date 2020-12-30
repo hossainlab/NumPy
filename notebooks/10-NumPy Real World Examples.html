@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>NumPy Real World Examples &#8212; Introduction to NumPy</title>
+    <title>&lt;no title&gt; &#8212; Introduction to NumPy</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -108,6 +108,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="04-Setting-and-Slicing-Array-Elements.html">
+   Setting and Slicing Array Elements
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="06-Array-Operations.html">
    Array Operations
   </a>
@@ -127,6 +132,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="08-Statistics.html">
    Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-Linear Algebra.html">
+   Linear Algebra
   </a>
  </li>
 </ul>
@@ -236,12 +246,7 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
+            <ul class="simple nav section-nav flex-column">
 </ul>
 
         </nav>
@@ -253,294 +258,7 @@
         
               <div>
                 
-  <div class="section" id="numpy-real-world-examples">
-<h1>NumPy Real World Examples<a class="headerlink" href="#numpy-real-world-examples" title="Permalink to this headline">¶</a></h1>
-<p>\begin{exercise}
-Write a NumPy program to get the numpy version and show numpy build configuration.
-\end{exercise}</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy Version </span>
-<span class="n">np</span><span class="o">.</span><span class="n">__version__</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.19.2&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy build config </span>
-<span class="n">np</span><span class="o">.</span><span class="n">show_config</span><span class="p">()</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>blas_mkl_info:
-  NOT AVAILABLE
-blis_info:
-  NOT AVAILABLE
-openblas_info:
-    libraries = [&#39;openblas&#39;, &#39;openblas&#39;]
-    library_dirs = [&#39;/usr/local/lib&#39;]
-    language = c
-    define_macros = [(&#39;HAVE_CBLAS&#39;, None)]
-blas_opt_info:
-    libraries = [&#39;openblas&#39;, &#39;openblas&#39;]
-    library_dirs = [&#39;/usr/local/lib&#39;]
-    language = c
-    define_macros = [(&#39;HAVE_CBLAS&#39;, None)]
-lapack_mkl_info:
-  NOT AVAILABLE
-openblas_lapack_info:
-    libraries = [&#39;openblas&#39;, &#39;openblas&#39;]
-    library_dirs = [&#39;/usr/local/lib&#39;]
-    language = c
-    define_macros = [(&#39;HAVE_CBLAS&#39;, None)]
-lapack_opt_info:
-    libraries = [&#39;openblas&#39;, &#39;openblas&#39;]
-    library_dirs = [&#39;/usr/local/lib&#39;]
-    language = c
-    define_macros = [(&#39;HAVE_CBLAS&#39;, None)]
-</pre></div>
-</div>
-</div>
-</div>
-<p>\begin{exercise}
-Write a NumPy program to get help on the add function.
-\end{exercise}</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get help from NumPy </span>
-<span class="n">np</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>add(x1, x2, /, out=None, *, where=True, casting=&#39;same_kind&#39;, order=&#39;K&#39;, dtype=None, subok=True[, signature, extobj])
-
-Add arguments element-wise.
-
-Parameters
-----------
-x1, x2 : array_like
-    The arrays to be added.
-    If ``x1.shape != x2.shape``, they must be broadcastable to a common
-    shape (which becomes the shape of the output).
-out : ndarray, None, or tuple of ndarray and None, optional
-    A location into which the result is stored. If provided, it must have
-    a shape that the inputs broadcast to. If not provided or None,
-    a freshly-allocated array is returned. A tuple (possible only as a
-    keyword argument) must have length equal to the number of outputs.
-where : array_like, optional
-    This condition is broadcast over the input. At locations where the
-    condition is True, the `out` array will be set to the ufunc result.
-    Elsewhere, the `out` array will retain its original value.
-    Note that if an uninitialized `out` array is created via the default
-    ``out=None``, locations within it where the condition is False will
-    remain uninitialized.
-**kwargs
-    For other keyword-only arguments, see the
-    :ref:`ufunc docs &lt;ufuncs.kwargs&gt;`.
-
-Returns
--------
-add : ndarray or scalar
-    The sum of `x1` and `x2`, element-wise.
-    This is a scalar if both `x1` and `x2` are scalars.
-
-Notes
------
-Equivalent to `x1` + `x2` in terms of array broadcasting.
-
-Examples
---------
-&gt;&gt;&gt; np.add(1.0, 4.0)
-5.0
-&gt;&gt;&gt; x1 = np.arange(9.0).reshape((3, 3))
-&gt;&gt;&gt; x2 = np.arange(3.0)
-&gt;&gt;&gt; np.add(x1, x2)
-array([[  0.,   2.,   4.],
-       [  3.,   5.,   7.],
-       [  6.,   8.,  10.]])
-</pre></div>
-</div>
-</div>
-</div>
-<p>\begin{exercise}
-Write a NumPy program to test whether none of the elements of a given array is zero.
-\end{exercise}</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution: if zero not exist </span>
-<span class="n">A1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">,</span> <span class="mi">6</span><span class="p">])</span> 
-<span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution: if zero exist in array </span>
-<span class="n">A2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">,</span> <span class="mi">6</span><span class="p">])</span> 
-<span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-<p>\begin{exercise}
-Write a NumPy program to test whether any of the elements of a given array is non-zero.
-\end{exercise}</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution: if zero not exist </span>
-<span class="n">X1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">,</span> <span class="mi">6</span><span class="p">])</span> 
-<span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">X1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution: if zero exist in array </span>
-<span class="n">X2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> 
-<span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">X2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> any(*args, **kwargs)
-
-Test whether any array element along a given axis evaluates to True.
-
-Returns single boolean unless `axis` is not ``None``
-
-Parameters
-----------
-a : array_like
-    Input array or object that can be converted to an array.
-axis : None or int or tuple of ints, optional
-    Axis or axes along which a logical OR reduction is performed.
-    The default (``axis=None``) is to perform a logical OR over all
-    the dimensions of the input array. `axis` may be negative, in
-    which case it counts from the last to the first axis.
-
-    .. versionadded:: 1.7.0
-
-    If this is a tuple of ints, a reduction is performed on multiple
-    axes, instead of a single axis or all the axes as before.
-out : ndarray, optional
-    Alternate output array in which to place the result.  It must have
-    the same shape as the expected output and its type is preserved
-    (e.g., if it is of type float, then it will remain so, returning
-    1.0 for True and 0.0 for False, regardless of the type of `a`).
-    See `ufuncs-output-type` for more details.
-
-keepdims : bool, optional
-    If this is set to True, the axes which are reduced are left
-    in the result as dimensions with size one. With this option,
-    the result will broadcast correctly against the input array.
-
-    If the default value is passed, then `keepdims` will not be
-    passed through to the `any` method of sub-classes of
-    `ndarray`, however any non-default value will be.  If the
-    sub-class&#39; method does not implement `keepdims` any
-    exceptions will be raised.
-
-Returns
--------
-any : bool or ndarray
-    A new boolean or `ndarray` is returned unless `out` is specified,
-    in which case a reference to `out` is returned.
-
-See Also
---------
-ndarray.any : equivalent method
-
-all : Test whether all elements along a given axis evaluate to True.
-
-Notes
------
-Not a Number (NaN), positive infinity and negative infinity evaluate
-to `True` because these are not equal to zero.
-
-Examples
---------
-&gt;&gt;&gt; np.any([[True, False], [True, True]])
-True
-
-&gt;&gt;&gt; np.any([[True, False], [False, False]], axis=0)
-array([ True, False])
-
-&gt;&gt;&gt; np.any([-1, 0, 5])
-True
-
-&gt;&gt;&gt; np.any(np.nan)
-True
-
-&gt;&gt;&gt; o=np.array(False)
-&gt;&gt;&gt; z=np.any([-1, 4, 5], out=o)
-&gt;&gt;&gt; z, o
-(array(True), array(True))
-&gt;&gt;&gt; # Check now that z is a reference to o
-&gt;&gt;&gt; z is o
-True
-&gt;&gt;&gt; id(z), id(o) # identity of z and o              # doctest: +SKIP
-(191614240, 191614240)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>https://numpy.org/</p></li>
-<li><p>https://www.edureka.co/blog/python-numpy-tutorial/</p></li>
-<li><p>https://github.com/enthought/Numpy-Tutorial-SciPyConf-2019</p></li>
-<li><p><a class="reference external" href="https://www.amazon.com/Python-Machine-Learning-Cookbook-Prateek/dp/1786464470">Python Machine Learning Cookbook</a></p></li>
-</ul>
-<hr>
-<p><em>This notebook was created by <a class="reference external" href="https://jhossain.me/">Jubayer Hossain</a> | Copyright © 2020, <a class="reference external" href="https://jhossain.me/">Jubayer Hossain</a></em></p>
-</div>
-</div>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,

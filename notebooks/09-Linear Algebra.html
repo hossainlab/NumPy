@@ -57,6 +57,7 @@
     <link rel="shortcut icon" href="../_static/numpy.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Statistics" href="08-Statistics.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -108,6 +109,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="04-Setting-and-Slicing-Array-Elements.html">
+   Setting and Slicing Array Elements
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="06-Array-Operations.html">
    Array Operations
   </a>
@@ -118,7 +124,7 @@
   Advance
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="07-Vectors-and-Matrix.html">
    Vectors and Matrices
@@ -127,6 +133,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="08-Statistics.html">
    Statistics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Linear Algebra
   </a>
  </li>
 </ul>
@@ -262,6 +273,11 @@
      Rank of matrix
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inverse-of-a-matrix">
+     Inverse of a Matrix
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -324,16 +340,34 @@ Whre, A is a <span class="math notranslate nohighlight">\(2 \times 2\)</span> ma
 https://www.mathsisfun.com/algebra/matrix-determinant.html</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create matrix A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="s2">&quot;4, 5, 16, 7; 2,-3,2,3; 3,4,5,6; 4,7,8,9&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0  1  2  3]
- [ 4  5  6  7]
- [ 8  9 10 11]
- [12 13 14 15]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 4  5 16  7]
+ [ 2 -3  2  3]
+ [ 3  4  5  6]
+ [ 4  7  8  9]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create matrix B</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="s2">&quot;4,5,6,7;2,-3,3,3; 3,4,5,6; 4, 7,8,9&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 4  5  6  7]
+ [ 2 -3  3  3]
+ [ 3  4  5  6]
+ [ 4  7  8  9]]
 </pre></div>
 </div>
 </div>
@@ -346,14 +380,7 @@ https://www.mathsisfun.com/algebra/matrix-determinant.html</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="s2">&quot;4,5,6,7;2,-3,3,3; 3,4,5,6; 4, 7,8,9&quot;</span><span class="p">)</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>128.00000000000009
 </pre></div>
 </div>
 </div>
@@ -380,13 +407,82 @@ https://www.mathsisfun.com/algebra/matrix-determinant.html</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># rank </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># rank of matrix A </span>
 <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_rank</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># rank of matrix B </span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_rank</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="inverse-of-a-matrix">
+<h3>Inverse of a Matrix<a class="headerlink" href="#inverse-of-a-matrix" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">np.linalg.inv()</span></code> - returns the multiplicative inverse of a matrix.</p></li>
+<li><p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">np.linalg.inv(matrix)</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inverse of matrix A </span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matrix([[ 9.37500000e-02, -4.68750000e-01,  3.68750000e+00,
+         -2.37500000e+00],
+        [ 1.00929366e-16, -2.50000000e-01,  5.00000000e-01,
+         -2.50000000e-01],
+        [ 9.37500000e-02,  3.12500000e-02, -3.12500000e-01,
+          1.25000000e-01],
+        [-1.25000000e-01,  3.75000000e-01, -1.75000000e+00,
+          1.25000000e+00]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inverse of matrix B </span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matrix([[ 1.50000000e+00, -8.32667268e-17, -1.00000000e+00,
+         -5.00000000e-01],
+        [ 2.50000000e-01, -1.66666667e-01, -3.33333333e-01,
+          8.33333333e-02],
+        [ 1.00000000e+00,  3.33333333e-01, -3.33333333e+00,
+          1.33333333e+00],
+        [-1.75000000e+00, -1.66666667e-01,  3.66666667e+00,
+         -9.16666667e-01]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Rank of matrix 
+- `np.linalg.matrix_rank()` - returns rank of the matrix 
+- **Syntax:** `np.linalg.matrix_rank(matrix)`
 </pre></div>
 </div>
 </div>
@@ -423,6 +519,7 @@ https://www.mathsisfun.com/algebra/matrix-determinant.html</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="08-Statistics.html" title="previous page">Statistics</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
