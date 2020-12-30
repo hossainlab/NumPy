@@ -23,7 +23,7 @@
 
 # ## Linear Algebra Operations 
 
-# In[1]:
+# In[4]:
 
 
 # import numpy
@@ -44,27 +44,30 @@ import numpy as np
 # __Source:__
 # https://www.mathsisfun.com/algebra/matrix-determinant.html
 
-# In[2]:
+# In[17]:
 
 
-A = np.arange(0, 16).reshape(4,4)
+# create matrix A
+A = np.matrix("4, 5, 16, 7; 2,-3,2,3; 3,4,5,6; 4,7,8,9")
 print(A)
 
 
-# In[3]:
+# In[18]:
+
+
+# create matrix B
+B = np.matrix("4,5,6,7;2,-3,3,3; 3,4,5,6; 4, 7,8,9")
+print(B)
+
+
+# In[19]:
 
 
 # determinant of A 
 np.linalg.det(A) 
 
 
-# In[4]:
-
-
-B = np.matrix("4,5,6,7;2,-3,3,3; 3,4,5,6; 4, 7,8,9")
-
-
-# In[5]:
+# In[20]:
 
 
 # determinant of B 
@@ -75,9 +78,78 @@ np.linalg.det(B)
 # - `np.linalg.matrix_rank()` - returns rank of the matrix 
 # - **Syntax:** `np.linalg.matrix_rank(matrix)`
 
-# In[6]:
+# In[21]:
 
 
-# rank 
+# rank of matrix A 
 np.linalg.matrix_rank(A)
+
+
+# In[22]:
+
+
+# rank of matrix B 
+np.linalg.matrix_rank(B)
+
+
+# ### Inverse of a Matrix 
+# - `np.linalg.inv()` - returns the multiplicative inverse of a matrix.
+# - **Syntax:** `np.linalg.inv(matrix)`
+
+# In[23]:
+
+
+# inverse of matrix A 
+np.linalg.inv(A)
+
+
+# In[24]:
+
+
+# inverse of matrix B 
+np.linalg.inv(B)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+### Rank of matrix 
+- `np.linalg.matrix_rank()` - returns rank of the matrix 
+- **Syntax:** `np.linalg.matrix_rank(matrix)`
 

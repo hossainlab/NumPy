@@ -6,7 +6,7 @@
   - file: notebooks/01-Introduction-to-NumPy
   - file: notebooks/02-Array-Creation-Function
   - file: notebooks/03-Data-Types
-  - file: notebooks/04-Setting-Array-Elements
+  - file: notebooks/04-Setting-and-Slicing-Array-Elements
   - file: notebooks/05-Array-Slicing
   - file: notebooks/06-Array-Operations
 
@@ -14,3 +14,6 @@
   chapters:
   - file: notebooks/07-Vectors-and-Matrix
   - file: notebooks/08-Statistics
+  - file: notebooks/09-Linear Algebra
+
+
