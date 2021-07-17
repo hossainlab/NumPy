@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome &#8212; Introduction to NumPy</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -24,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -39,14 +40,11 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -57,7 +55,7 @@
     <link rel="shortcut icon" href="_static/numpy.svg"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="About NumPy" href="notebooks/00-intro.html" />
+    <link rel="next" title="Introduction to NumPy" href="notebooks/00_Introduction.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -94,28 +92,73 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/00-intro.html">
-   About NumPy
+  <a class="reference internal" href="notebooks/00_Introduction.html">
+   Introduction to NumPy
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/02-Array-Creation-Function.html">
+  <a class="reference internal" href="notebooks/01_Getting%20Started.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/02_ArrayCreationFunction.html">
    Array Creation Function
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/03-Data-Types.html">
-   Data Types
+  <a class="reference internal" href="notebooks/03_DataTypes.html">
+   NumPy Data Types
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/04-Setting-and-Slicing-Array-Elements.html">
-   Setting and Slicing Array Elements
+  <a class="reference internal" href="notebooks/04_ArraySlicingandSubsetting.html">
+   Array Indexing and Slicing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/06-Array-Operations.html">
+  <a class="reference internal" href="notebooks/05_IteratingArrays.html">
+   Iterating Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/06_ArrayOperations.html">
    Array Operations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/07_ChangingShapeOfAnArray.html">
+   Array Shape Manipulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/08_SplittingArrays.html">
+   Splitting Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/09_CopyandView.html">
+   View vs Copy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/09_CopyandView.html#deep-copy">
+   Deep Copy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/10_BroadcastingRules.html">
+   Broadcasting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/11_Stacking.html">
+   Vector Stacking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/12_UniversalFunctions.html">
+   Universal Functions
   </a>
  </li>
 </ul>
@@ -126,17 +169,17 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/07-Vectors-and-Matrix.html">
+  <a class="reference internal" href="notebooks/14_VectorsandMatrix.html">
    Vectors and Matrices
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/08-Statistics.html">
+  <a class="reference internal" href="notebooks/15_Statistics.html">
    Statistics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/09-Linear Algebra.html">
+  <a class="reference internal" href="notebooks/16_Linear%20Algebra.html">
    Linear Algebra
   </a>
  </li>
@@ -279,7 +322,7 @@ Book documentation.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="notebooks/00-intro.html" title="next page">About NumPy</a>
+    <a class='right-next' id="next-link" href="notebooks/00_Introduction.html" title="next page">Introduction to NumPy</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
